@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقييم برنامج تحصين الدواجن</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- العنوان الرئيسي للصفحة -->
+        <h1>تقييم برنامج تحصين الدواجن</h1>
+
+        <!-- جدول لإضافة أسماء التحصينات -->
+        <table id="vaccinationTable">
+            <thead>
+                <tr id="vaccinationHeader">
+                    <!-- سيتم ملء هذا الصف بأسماء التحصينات بشكل أفقي -->
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+
+        <!-- النموذج لإضافة أسماء التحصينات وتحديد النوع والتاريخ -->
+        <form id="vaccinationForm">
+            <label for="vaccineName">إضافة تحصين:</label>
+            <input type="text" id="vaccineName" placeholder="اسم التحصين" required>
+            
+            <label for="vaccineType">النوع:</label>
+            <select id="vaccineType">
+                <option value="live">حي</option>
+                <option value="dead">ميت</option>
+            </select>
+            
+            <label for="vaccineDate">التاريخ:</label>
+            <input type="date" id="vaccineDate" required>
+
+            <button type="submit">إضافة التحصين</button>
+        </form>
+
+        <!-- خانة منسدلة لعرض أسماء التحصينات -->
+        <select id="vaccineSelect">
+            <option value="">اختر التحصين</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
